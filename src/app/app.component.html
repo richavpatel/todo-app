@@ -4,10 +4,10 @@
     <h1>{{title}}</h1>
 <div class="row">
   <div class="col-3">
-    <input type="text"class="form-control" #vivek>
+    <input type="text"class="form-control" #name>
   </div>
   <div class="col-6">
-    <button type="button" class="btn btn-primary"(click)= "addTodo(vivek.value)"> add </button>
+    <button type="button" class="btn btn-primary"(click)= "addTodo(name.value)"> add </button>
   </div>
 </div>
 
@@ -22,7 +22,7 @@
   <tr *ngFor="let todo of todos">
     <td>{{todo.label}}</td>
     <td>{{todo.no}}</td>
-    <td>{{todo.done ? 'richa' : 'vivek'}}</td>
+    <td>{{todo.done ? 'yes' : 'no'}}</td>
     <button type="butoon" class="btn btn-danger" (click)="deleteTodo(todo)">Delete</button>
     <button type="button" class="btn btn-success"(click)="markAsDoneTodo(todo)">Done</button>
   </tr>
